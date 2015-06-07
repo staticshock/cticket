@@ -55,7 +55,9 @@ ROOT_URLCONF = 'cticket.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'cticket/templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
