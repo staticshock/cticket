@@ -6,3 +6,7 @@ def index(request):
     template = loader.get_template('index.html')
     context = RequestContext(request, {})
     return HttpResponse(template.render(context))
+
+
+def traffic_stops(request):
+    return HttpResponse("I'm not familiar with %s." % request.GET["badge_num"])
