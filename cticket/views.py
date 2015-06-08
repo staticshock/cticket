@@ -9,4 +9,7 @@ def index(request):
 
 
 def traffic_stops(request):
-    return HttpResponse("I'm not familiar with %s." % request.GET["badge_num"])
+    template = loader.get_template('traffic_stops.html')
+    # TODO search db for request.GET["badge_num"], attach results to context:
+    context = RequestContext(request, {})
+    return HttpResponse(template.render(context))
